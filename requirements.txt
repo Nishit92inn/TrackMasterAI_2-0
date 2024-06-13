@@ -1,0 +1,6 @@
+Flask
+tensorflow
+mtcnn
+requests
+beautifulsoup4
+pandas

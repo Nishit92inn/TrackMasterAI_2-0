@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home - TrackMaster AI Face Detection{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Image Scraper</h5>
+                    <p class="card-text">Scrape images of celebrities for face detection.</p>
+                    <a href="{{ url_for('image_scraper_bp.image_scraper') }}" class="btn btn-primary">Go to Image Scraper</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Face Detection and Feature Engineering</h5>
+                    <p class="card-text">Detect and extract faces from the scraped images.</p>
+                    <button class="btn btn-secondary" disabled>Go to Face Detection</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Train the Model</h5>
+                    <p class="card-text">Train models for face recognition and evaluate their performance.</p>
+                    <button class="btn btn-secondary" disabled>Go to Model Training</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Test the Model</h5>
+                    <p class="card-text">Upload an image to test the trained model.</p>
+                    <button class="btn btn-secondary" disabled>Test the Model</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
