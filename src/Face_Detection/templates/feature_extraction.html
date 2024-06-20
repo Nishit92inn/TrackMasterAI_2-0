@@ -1,0 +1,22 @@
+<!-- src/Face_Detection/templates/feature_extraction.html -->
+
+{% extends "base.html" %}
+
+{% block title %}
+Feature Extraction
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Feature Extraction</h1>
+    <p>Click the button below to start feature extraction. This will process all the detected faces and extract features, storing them in the Processed_DataSet folder.</p>
+    <button id="start-feature-extraction" class="btn btn-primary">Start Feature Extraction</button>
+    <button id="back-to-face-detection" class="btn btn-secondary">Back</button>
+    <div id="feature-extraction-progress" class="progress mt-3" style="display:none;">
+        <div id="progress-bar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+    </div>
+    <div id="log" class="mt-3"></div>
+</div>
+
+<script src="{{ url_for('face_detection.static', filename='js/feature_extraction.js') }}"></script>
+{% endblock %}

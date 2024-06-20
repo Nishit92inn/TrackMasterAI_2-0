@@ -19,7 +19,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Face Detection and Feature Engineering</h5>
                     <p class="card-text">Detect and extract faces from the scraped images.</p>
-                    <button class="btn btn-secondary" disabled>Go to Face Detection</button>
+                    <a href="{{ url_for('face_detection.face_detection') }}" class="btn btn-primary">Go to Face Detection</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Train the Model</h5>
                     <p class="card-text">Train models for face recognition and evaluate their performance.</p>
-                    <button class="btn btn-secondary" disabled>Go to Model Training</button>
+                    <a href="{{ url_for('model_training.train_model_page') }}" class="btn btn-primary">Go to Model Training</a>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Test the Model</h5>
                     <p class="card-text">Upload an image to test the trained model.</p>
-                    <button class="btn btn-secondary" disabled>Test the Model</button>
+                    <a href="{{ url_for('model_testing.test_model_page') }}" class="btn btn-primary">Test the Model</a>
                 </div>
             </div>
         </div>

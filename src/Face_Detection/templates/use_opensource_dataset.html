@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    TrackMaster AI - Use OpenSource Dataset
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Use OpenSource Dataset</h2>
+    <p>Select one of the options below for the open source dataset:</p>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <button id="opensource-dataset1" class="btn btn-primary btn-lg">OpenSource Dataset 1</button>
+        </div>
+        <div class="col-md-4 text-center">
+            <button id="opensource-dataset2" class="btn btn-primary btn-lg">OpenSource Dataset 2</button>
+        </div>
+        <div class="col-md-4 text-center">
+            <button id="opensource-dataset3" class="btn btn-primary btn-lg">OpenSource Dataset 3</button>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/use_opensource_dataset.js') }}"></script>
+{% endblock %}

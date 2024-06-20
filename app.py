@@ -2,9 +2,15 @@ from flask import Flask, request, jsonify, render_template
 import threading
 from src.image_scraper.routes import image_scraper_bp
 from src.image_scraper.image_scraper import scrape_images, get_scraping_progress, rebuild_metadata
+from src.Face_Detection.routes import face_detection_bp
+from src.Model_Training import model_training_bp
+from src.Model_Testing.routes import model_testing_bp
 
 app = Flask(__name__)
 app.register_blueprint(image_scraper_bp, url_prefix='/image_scraper')
+app.register_blueprint(face_detection_bp, url_prefix='/face_detection')
+app.register_blueprint(model_training_bp, url_prefix='/model_training')
+app.register_blueprint(model_testing_bp, url_prefix='/model_testing')
 
 @app.route('/')
 def home():
@@ -36,4 +42,4 @@ def rebuild_metadata_route():
     return jsonify({'message': 'Metadata rebuilt successfully'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

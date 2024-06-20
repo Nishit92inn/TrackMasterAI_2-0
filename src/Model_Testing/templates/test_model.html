@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Test Model - TrackMaster AI Face Detection{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Test Model</h1>
+    <div class="form-group">
+        <label for="modelSelect">Select Model:</label>
+        <select class="form-control" id="modelSelect">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+    <div id="modelDetails" style="display: none;">
+        <h2 class="mt-4">Upload Image for Testing</h2>
+        <form id="uploadImageForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imageUpload">Upload Image:</label>
+                <input type="file" class="form-control" id="imageUpload" name="image" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Upload and Test</button>
+        </form>
+        <div id="predictionResult" class="mt-4"></div>
+    </div>
+</div>
+
+<script src="{{ url_for('model_testing.static', filename='js/test_model.js') }}"></script>
+{% endblock %}

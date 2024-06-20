@@ -4,3 +4,9 @@ mtcnn
 requests
 beautifulsoup4
 pandas
+mtcnn
+keras
+opencv-python
+scikit-learn
+pillow
+
